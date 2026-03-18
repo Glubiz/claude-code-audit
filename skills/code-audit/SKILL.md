@@ -1,6 +1,6 @@
 ---
 name: code-audit
-description: Use when code review has just completed, when about to finish a development branch or create a PR, or when user invokes /audit — runs adversarial three-tier code audit checking for AI slop, security, performance, and readability issues
+description: Use when code review has just completed, when about to finish a development branch or create a PR, or when user invokes /audit — catches AI slop, people-pleasing, unjustified abstractions, security issues, and code quality problems
 ---
 
 # Code Audit
