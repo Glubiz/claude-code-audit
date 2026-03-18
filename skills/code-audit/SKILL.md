@@ -90,6 +90,7 @@ Paste these into the subagent prompt (full text, not file references):
 3. **Commit messages:** `git log --oneline {base_sha}..{head_sha}`
 4. **Plan file:** Contents of plan file if one exists in `docs/plans/`
 5. **Convention samples:** For each unique file type in the changed files, sample up to 3 non-test files from the same directory (most recently modified first), max 200 lines each, capped at 5 files total across all types/directories. If changes span many directories, prioritize directories with the most changed files. A file is a test file if its path matches: `tests/`, `__tests__/`, `test/`, `spec/` directories, or patterns `*_test.*`, `*.test.*`, `*.spec.*`, `test_*.*`.
+6. **CLAUDE.md / AGENTS.md:** Read and include the full contents of CLAUDE.md and AGENTS.md from the project root (if they exist). These contain project-specific rules that the auditor must enforce. Walk up from the project root to find any parent CLAUDE.md files as well.
 
 ### Handle the Verdict
 

@@ -12,10 +12,11 @@ You will receive:
 - **Commit messages** — use as proxy for task intent
 - **Plan file** (if provided) — what was supposed to be built
 - **Codebase convention samples** — what existing code looks like
+- **CLAUDE.md / AGENTS.md contents** (if they exist) — project rules that MUST be followed
 
 ## The Audit Checklist
 
-Review EVERY changed line against ALL 12 items. Do not skip items because "they probably don't apply."
+Review EVERY changed line against ALL 13 items. Do not skip items because "they probably don't apply."
 
 ### Anti-Slop Detection
 
@@ -35,6 +36,10 @@ Review EVERY changed line against ALL 12 items. Do not skip items because "they 
 11. **Performance** — Unnecessary loops or iterations? N+1 query patterns? Missing indexes implied by query patterns? Unneeded memory allocations? Flag it.
 12. **Readability** — Unclear variable/function naming? Convoluted control flow? Deep nesting where early returns would work? Flag it.
 
+### Project Rules Compliance
+
+13. **CLAUDE.md / AGENTS.md violations** — Read the project's CLAUDE.md and AGENTS.md files (if provided). Every rule in these files is a hard requirement. Check every changed line against every rule. Common violations: wrong coding style, prohibited patterns (e.g. `if app_env == production`), missing early returns, deep nesting, duplicated code, wrong commit message format, environment values in code, wrong image tags. CLAUDE.md violations are IMPORTANT by default, but violations of rules explicitly marked as critical or blocking in the file should be CRITICAL.
+
 ## Output Format
 
 You MUST use this exact format. No prose before or after.
@@ -50,7 +55,7 @@ You MUST use this exact format. No prose before or after.
 - file: [exact/path:line_number]
   issue: [one-line description of what's wrong]
   action: [exact instruction for what to do — "remove", "inline into X", "replace with Y", etc.]
-  category: [one of: unjustified-abstraction, over-commenting, defensive-over-engineering, people-pleasing, scope-creep, verbose, generic-implementation, phantom-requirement, style-inconsistency, security, performance, readability]
+  category: [one of: unjustified-abstraction, over-commenting, defensive-over-engineering, people-pleasing, scope-creep, verbose, generic-implementation, phantom-requirement, style-inconsistency, security, performance, readability, claude-md-violation]
 
 ### IMPORTANT
 - file: [exact/path:line_number]
