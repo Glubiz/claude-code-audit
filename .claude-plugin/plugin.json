@@ -1,0 +1,20 @@
+{
+  "name": "claude-code-audit",
+  "description": "Three-tier adversarial code audit system that catches AI slop, enforces code quality, and prevents people-pleasing",
+  "version": "0.1.0",
+  "author": {
+    "name": "Jonathan Solskov Jensen",
+    "email": "josj@solskov-jensen.dk"
+  },
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "audit",
+    "code-quality",
+    "anti-slop",
+    "security",
+    "performance",
+    "readability",
+    "adversarial-review"
+  ]
+}
