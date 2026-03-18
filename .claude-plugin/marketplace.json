@@ -1,0 +1,20 @@
+{
+  "name": "claude-code-audit",
+  "description": "Three-tier adversarial code audit system",
+  "owner": {
+    "name": "Jonathan Solskov Jensen",
+    "email": "josj@solskov-jensen.dk"
+  },
+  "plugins": [
+    {
+      "name": "claude-code-audit",
+      "description": "Three-tier adversarial code audit system that catches AI slop, enforces code quality, and prevents people-pleasing",
+      "version": "0.1.0",
+      "source": "./",
+      "author": {
+        "name": "Jonathan Solskov Jensen",
+        "email": "josj@solskov-jensen.dk"
+      }
+    }
+  ]
+}
